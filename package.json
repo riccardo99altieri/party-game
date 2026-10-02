@@ -1,0 +1,16 @@
+{
+  "name": "party-game",
+  "version": "1.0.0",
+  "description": "Party game in rete locale: il computer è lo schermo principale, i telefoni sono i controller. Tanti minigiochi, torneo con classifica.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js --open",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

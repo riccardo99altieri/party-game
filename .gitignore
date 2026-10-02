@@ -1,0 +1,7 @@
+# Personaggi salvati su questo PC (ognuno ha i suoi)
+dati/
+
+# Impostazioni locali di Claude Code
+.claude/
+
+node_modules/

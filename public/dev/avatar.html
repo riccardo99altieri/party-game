@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Prova avatar</title>
+<style>body{margin:0;background:#3b2a7a}canvas{display:block;width:100%}</style>
+</head>
+<body>
+<canvas id="c" width="1600" height="900"></canvas>
+<script type="module">
+import { disegnaAvatar, disegnaTesta, casuale, prepara } from '../shared/avatar.js';
+const g = document.getElementById('c').getContext('2d');
+const poses = ['idle', 'walk', 'run', 'cheer', 'sad', 'hit', 'jump', 'point'];
+const avs = [];
+for (let i = 0; i < 24; i++) avs.push(prepara({ ...casuale(i % 16), capelli: i % 12, cappello: i % 9, occhi: i % 8, bocca: i % 8, barba: i % 6, occhiali: i % 6, maglia: i % 6, testa: i % 5, fisico: i % 3, pantaloni: i % 3 }));
+function frame(ms) {
+  const t = ms / 1000;
+  g.fillStyle = '#3b2a7a';
+  g.fillRect(0, 0, 1600, 900);
+  avs.forEach((av, i) => {
+    const x = 70 + (i % 12) * 130;
+    const y = 260 + Math.floor(i / 12) * 300;
+    disegnaAvatar(g, av, x, y, 200, { pose: poses[i % poses.length], t });
+  });
+  avs.slice(0, 12).forEach((av, i) => disegnaTesta(g, av, 70 + i * 130, 800, 50, { t }));
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
