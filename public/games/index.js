@@ -1,7 +1,7 @@
 // Registro dei minigiochi. Per aggiungerne uno: crea la cartella games/<id>/
 // con host.js e phone.js (vedi LEGGIMI.md) e aggiungi l'id qui sotto.
 
-export const ELENCO = ['sumo', 'lumache', 'bocce', 'filo', 'manoferma', 'galleria', 'colore', 'twister', 'fuoco', 'unico', 'ali', 'polpo', 'bomba', 'pollici', 'circo', 'intruso'];
+export const ELENCO = ['sumo', 'lumache', 'bocce', 'filo', 'manoferma', 'galleria', 'colore', 'twister', 'fuoco', 'unico', 'ali', 'polpo', 'bomba', 'pollici', 'circo', 'intruso', 'uomonero', 'fightclub', 'abduction'];
 
 // Icone e nomi dei tipi di controllo (per le schede del catalogo).
 export const CONTROLLI = {
@@ -21,6 +21,9 @@ export const CONTROLLI = {
   pollici: { emoji: '👍', nome: 'Due pollici' },
   cooperativo: { emoji: '🤝', nome: 'Cooperativo' },
   stealth: { emoji: '🥷', nome: 'Nascondino' },
+  buio: { emoji: '🔦', nome: 'Uno contro tutti al buio' },
+  duello: { emoji: '🥊', nome: 'Scommesse e duelli' },
+  mandria: { emoji: '🐄', nome: 'Mimetizzati e bruca' },
 };
 
 export async function caricaHost() {

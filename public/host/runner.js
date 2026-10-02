@@ -134,7 +134,7 @@ export function creaPartita({ def, giocatori, app, etichettaTorneo = '', moltipl
     const r = sp[0] ? infoRuoli[ruoli[sp[0].id]] : null;
     const box = domIntro.querySelector('.intro-ruoli');
     box.innerHTML = r
-      ? `<span>${r.emoji} ${sp.length > 1 ? `I ${esc(r.nome)}` : `Il ${esc(r.nome)}`}: <b>${sp.map((p) => esc(p.nome)).join('</b> e <b>')}</b></span><button class="btn btn-2 btn-piccolo" data-a="cambia">🔄 Cambia ${esc(r.nome)}</button>`
+      ? `<span>${r.emoji} ${sp.length > 1 ? `I ${esc(r.nome)}` : `${esc(r.articolo || 'Il ')}${esc(r.nome)}`}: <b>${sp.map((p) => esc(p.nome)).join('</b> e <b>')}</b></span><button class="btn btn-2 btn-piccolo" data-a="cambia">🔄 Cambia ${esc(r.nome)}</button>`
       : '';
     for (const el of domIntro.querySelectorAll('.pronto-chip')) {
       const info = infoRuoli[ruoli[el.dataset.id]];

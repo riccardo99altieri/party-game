@@ -66,6 +66,7 @@ Nella lobby c'è **🤖 Aggiungi bot**: utile se siete in pochi o per provare il
 - Sotto "🤖 Potenza dei bot" si cambia la potenza di **tutti** i bot con un clic (e vale anche per quelli che aggiungi dopo).
 - Per cambiarne **uno solo**, clicca l'icona 🐣 / 🙂 / 🔥 accanto al suo nome, in basso a sinistra: gira tra le tre potenze.
 - Le CPU giocano pulito: sanno solo quello che saprebbe una persona (lo schermo grande e il proprio telefono), reagiscono con tempi umani e hanno ognuna un carattere un po' diverso (più aggressiva, più prudente, più costante…).
+- **BOT DA CREARE / CALIBRARE** — in questi giochi le CPU sono provvisorie (un cervello unico, le tre potenze giocano uguali): 🔦 L'Uomo Nero, 🥊 Fight Club, 🛸 Abduction.
 
 ## I minigiochi
 
@@ -87,6 +88,9 @@ Nella lobby c'è **🤖 Aggiungi bot**: utile se siete in pochi o per provare il
 | 🤞 Mani Incrociate | due pollici | Twister per pollici: tieni i due pollici sui binari che scorrono, si incrociano e si allargano. Corsa a ostacoli sulla TV. Vedi sotto |
 | 🎪 Circo dei Disperati | un ruolo a testa | Cooperativo: 5 ruoli diversi sui telefoni, una sola barra per tutta la squadra. Chi ha sbagliato lo dice la Pagella del Disastro. Vedi sotto |
 | 🎭 Trova l'Intruso | D-pad a 8 direzioni + PUGNO 👊 | Tutti contro tutti, di nascosto: sei un personaggio identico a decine di passanti, solo il tuo telefono sa qual è. Mimetizzati e stendi gli altri. 3 round. Vedi sotto |
+| 🔦 L'Uomo Nero | D-pad + TORCIA / poteri | Uno contro tutti al buio: i sopravvissuti caricano le batterie e scappano, l'Uomo Nero (invisibile, solo la luce lo svela) li afferra. **BOT DA CREARE / CALIBRARE**. Vedi sotto |
+| 🥊 Fight Club | scommessa, cursore, tifo a raffica | Duelli 1 contro 1 di tempismo: il pubblico scommette su chi vince e tappa a raffica per rendergli il duello più facile. **BOT DA CREARE / CALIBRARE**. Vedi sotto |
+| 🛸 Abduction | joystick + BRUCA (tieni premuto) + SPINGI 💥 | Sei una mucca identica a decine di altre: bruca per fare punti, resta immobile quando passa il raggio del disco volante e spingi gli altri sotto. Round secco da 60 s. **BOT DA CREARE / CALIBRARE**. Vedi sotto |
 
 ### 🐙 Il Polpo (uno contro tutti)
 
@@ -195,6 +199,139 @@ Nella lobby c'è **🤖 Aggiungi bot**: utile se siete in pochi o per provare il
 
 - Le CPU giocano pulito: vedono solo la TV, si accorgono dei pugni e delle monete prese (più facilmente se sono vicini), notano chi sta fermo troppo, chi si muove a scatti o chi gli viene dritto addosso, e nella folla possono perdere di vista o scambiare chi stavano seguendo (così a volte colpiscono un passante). Il 🐣 Facile si fa notare (pause lunghe, scatti, pugni a caso), il 🔥 Difficile si mimetizza alla perfezione e colpisce solo quando è abbastanza sicuro. Se il telefono di qualcuno si spegne, una CPU cammina al suo posto finché non rientra.
 
+### 🔦 L'Uomo Nero (uno contro tutti al buio)
+
+> ⚠️ **BOT DA CREARE / CALIBRARE** — le CPU di questo gioco sono un cervello unico e semplice, fatto solo per poterlo giocare anche in pochi. **Le tre potenze (🐣 🙂 🔥) per ora giocano tutte uguali.** Da rifare con il banco di prova come negli altri giochi.
+
+- **La TV mostra solo quello che vedono i sopravvissuti.** Il labirinto è al buio: si vedono i coni di luce delle torce accese (che svelano muri e batterie), i ping, l'uscita e il **ricordo** dei muri già illuminati (appena visibile, così la mappa si disegna man mano). Chi ha la torcia spenta è invisibile anche sulla TV.
+- **L'Uomo Nero è invisibile**: appare solo quando una torcia lo colpisce (il cono diventa **bianco** e la sagoma resta 1 secondo). Le sagome uguali che girano da 6 giocatori in su sono gli **Echi**: innocui, si dissolvono quando ti arrivano addosso. Il battito sul telefono lo dà solo l'Uomo Nero vero.
+- **Chi fa l'Uomo Nero**: nel torneo chi è più indietro in classifica, in scelta libera chi l'ha fatto meno volte nella serata. Sulla scheda iniziale c'è **🔄 Cambia Uomo Nero**.
+- **Sopravvissuti** (telefono: mappa privata dove ci sei solo tu + D-pad + TORCIA + PING):
+  - **D-pad**: ci si muove nei corridoi; tenendo una direzione chiusa si va dritti e si gira appena si può. Da fermi il D-pad gira la torcia (per mirare).
+  - **🔦 TORCIA** accesa/spenta: accesa vedi e illumini, ma sulla TV (e quindi per l'Uomo Nero) sei visibile; spenta sei invisibile ma non vedi chi arriva.
+  - **🔋 Batterie**: stai fermo **2 secondi** sopra, **con la torcia accesa** (quindi visibile). Brillano piano anche al buio, così si sa dove andare.
+  - **🚪 Uscita**: la porta sul lato destro, si apre solo quando **tutte** le batterie sono cariche.
+  - **📍 PING** (ogni 8 s): un punto di luce sulla TV per 3 secondi, dove sei tu. Al massimo 3 ping insieme per tutta la squadra (il quarto cancella il più vecchio).
+  - **💓 Battito**: se l'Uomo Nero è entro 3 caselle il telefono vibra e il bordo pulsa di rosso, più veloce quando è più vicino. Non dice dove.
+  - La mappa del telefono mostra i muri già illuminati da qualcuno e quelli che hai "toccato" passando, le batterie, l'uscita, i Marchi e i ping.
+  - **Presi o scappati** non si sta a guardare: si tocca la mappa del telefono per mandare un ping dove serve.
+- **Uomo Nero** (telefono: sonar + D-pad + MORSA + poteri). Va **1,15 volte** più veloce. Sul telefono vede solo i **muri entro 2 caselle** (e il ricordo di quelli già visti), ma **chi ha la torcia accesa lo vede esattamente** (pallino giallo con il cono, come sulla TV). Chi ha la torcia spenta compare solo come **cerchio arancione** "qualcuno è lì" (senza nome né direzione), uno ogni 1,5 secondi a turno.
+
+  | Potere | Ricarica | Da quanti giocatori | Effetto |
+  |---|---|---|---|
+  | ✊ Morsa | — | sempre | afferra chi è attaccato a te (niente muri in mezzo) |
+  | 😱 Urlo | 12 s | sempre | per 3 s chi ha la torcia **accesa** è paralizzato: torcia bloccata accesa e passo rallentato (−40%); sul telefono del Boss diventano rossi. Chi ha la torcia spenta è immune |
+  | ☠️ Marchio | 20 s | 6+ | un cerchio rosso dove sei, per 15 s: chi ci resta dentro 3 secondi è preso |
+  | 🌑 Blackout | 25 s | 6+ | tutte le torce spente per 4 secondi (poi si riaccendono da sole) |
+
+  Da 11 giocatori in su i poteri si ricaricano un po' prima (−20%).
+- **Tiro alla fune (Morsa)**: dura 2 secondi, fino a 3 se la vittima tocca a raffica il suo pulsante gigante. L'Uomo Nero deve toccare senza fermarsi: se smette per mezzo secondo la vittima scappa. **Salvataggio**: se un altro sopravvissuto gli punta la torcia addosso, l'Uomo Nero resta **accecato** (4 s al 40% della velocità, senza poter afferrare) e la vittima è libera. Se nessuno arriva la vittima è presa e l'Uomo Nero si riprende in 1,5 s. Chi si libera ha 2,5 s in cui non può essere riafferrato.
+- **Fine**: quando tutti sono scappati o presi, oppure allo scadere del tempo (chi resta dentro "resta al buio" e conta come fermato). Alla fine si accende la luce e si vede tutto.
+
+  | Giocatori | Batterie | Echi | Tempo | Vite | Poteri |
+  |---|---|---|---|---|---|
+  | 3–5 | 5 | 0 | 120 s | 2 | Morsa + Urlo |
+  | 6–10 | 7 | 6–8 | 150 s | 1 | + Marchio + Blackout |
+  | 11–16 | 9 | 12–15 | 180 s | 1 | tutti, ricarica −20% |
+
+- **Punti**: sopravvissuto +4 se scappa, +1 per ogni batteria caricata, +1 per ogni salvataggio. Uomo Nero: 5 × la parte di sopravvissuti fermati (presi o rimasti dentro), +2 se non scappa nessuno (**Notte eterna**). Così sta sopra chi ha preso e sotto chi è scappato.
+- **Cose cambiate rispetto all'idea iniziale** (per renderlo più divertente):
+  - L'**Urlo** come scritto ("rivela chi ha la torcia accesa") non serviva: le torce accese si vedono già sulla TV. Ora **paralizza** chi ha la torcia accesa (torcia bloccata accesa + più lento), e chi l'ha spenta resta immune.
+  - **2 vite da 3 a 5 giocatori**: provando, in pochi l'Uomo Nero prendeva tutti in mezzo minuto. La prima Morsa persa ferisce soltanto (come le bolle in più del Polpo).
+  - Fare l'Uomo Nero era troppo difficile: sulla TV non vedi te stesso e dovevi confrontare due schermi. Ora **sul suo telefono vede esattamente chi ha la torcia accesa** (sono informazioni che tutti vedono già sulla TV). Per questo il **blip** riguarda solo chi ha la torcia spenta, e quando sono 1–2 arriva più di rado (ognuno al massimo ogni 4,5 s), altrimenti l'ultimo nascosto non ha scampo.
+  - Il **ricordo dei muri** già illuminati (TV e telefono) e le **batterie che brillano piano** anche al buio: senza, si girava a vuoto in un labirinto tutto nero.
+  - Nel **Marchio** il cerchio si vede (chi ci entra ha 3 secondi per uscire), e il **Blackout** riaccende le torce da solo alla fine.
+  - **Echi** e **ping dagli eliminati** come descritto sopra; il labirinto ha molti anelli (in un labirinto "perfetto" chi è inseguito non ha vie di fuga).
+- Se il telefono di qualcuno si spegne, una CPU gioca al suo posto finché non rientra.
+
+### 🥊 Fight Club (scommesse e duelli)
+
+> ⚠️ **BOT DA CREARE / CALIBRARE** — le CPU di questo gioco sono un cervello unico e semplice, fatto solo per poterlo giocare anche in pochi. **Le tre potenze (🐣 🙂 🔥) per ora giocano tutte uguali.** Da rifare con il banco di prova come negli altri giochi.
+
+- **L'arena (TV)**: a ogni duello due giocatori sono i **Gladiatori**: compaiono giganti ai lati, ognuno con la sua barra del **TIFO** 🔥. Al centro c'è il duello (bersagli, tavolo del braccio di ferro o tronchi) e sotto i due cursori, così tutti vedono quello che succede sui telefoni dei gladiatori. Le teste del pubblico si mettono sotto il gladiatore su cui hanno puntato; in fondo c'è la classifica della partita.
+- **Chi combatte**: tutti scendono nell'arena lo stesso numero di volte, le coppie cambiano il più possibile e nessuno combatte tre duelli di fila.
+- **1. Scommessa (4 s)**: tutti gli altri (il **Pubblico**) toccano sul telefono il gladiatore su cui puntano (si può cambiare fino allo scadere). I due gladiatori vedono solo **PREPARATI!**, contro chi combattono e la regola del duello.
+- **2. Duello e tifo (6–8 s)**:
+  - **Gladiatori**: sul telefono un cursore va avanti e indietro su una barra; si tocca ovunque sullo schermo.
+  - **Pubblico**: un pulsante gigante **FAI IL TIFO PER …!** da tempestare di tocchi. Chi non ha puntato può fare il tifo per chi vuole (ma non vince punti).
+  - **Il tifo** riempie la barra del suo gladiatore e conta il **ritmo** degli ultimi istanti: se smetti di toccare, la barra scende. È piena quando il pubblico è diviso a metà e tutti toccano circa 6 volte al secondo (con un solo spettatore basta lui). Si contano al massimo 14 tocchi al secondo a testa.
+
+  | Duello | Durata | Il gladiatore | Il tifo |
+  |---|---|---|---|
+  | 🎯 Colpo Secco | 6 s | un colpo solo: vince chi ferma il mirino più vicino al centro (chi non spara perde) | il mirino rallenta (fino al 40%) |
+  | 💪 Braccio di Ferro | 8 s | ogni tocco nel verde spinge il braccio; fuori dal verde si resta bloccati 0,6 s; il verde si sposta a ogni colpo. Vince chi schiaccia la mano dell'altro sul tavolo, o chi è in vantaggio allo scadere | il verde si allarga (fino al 35%) e i colpi sono più forti (+10%) |
+  | 🪓 Taglio della Legna | 8 s | ogni tocco nel verde è un colpo d'ascia, più profondo se è al centro del verde. Vince chi spacca per primo il tronco, o chi è più avanti allo scadere | come nel Braccio di Ferro |
+
+  I tre duelli si danno il cambio in ordine. I due gladiatori hanno lo stesso cursore e le stesse zone verdi: è una sfida alla pari, cambia solo il tifo.
+- **3. Punti**:
+
+  | Chi | Punti |
+  |---|---|
+  | Gladiatore che vince | +4 |
+  | Gladiatore sconfitto | −1 |
+  | **Miracolo**: chi vince aveva ricevuto meno tifo (meno tocchi) dell'avversario | +2 in più |
+  | Pubblico che ha puntato sul vincitore | +2 |
+  | … se sul vincitore avevano puntato meno persone che sull'altro (**quota alta**) | +3 invece di +2 |
+  | Pubblico che ha puntato sul perdente, o non ha puntato | 0 |
+  | Pareggio (nessuno spara, o parità perfetta: rarissimo) | 0 a tutti |
+
+  Vince chi ha più punti alla fine (a pari punti si è pari merito).
+- **Quanti duelli**: circa 8, scelti in modo che tutti combattano lo stesso numero di volte: 9 duelli in 3 (6 a testa), 8 in 4 (4 a testa), 10 in 5, 9 in 6, 6 in 12, 8 in 16 (1 a testa). Solo con 13 e 15 giocatori qualcuno combatte una volta in più. Ogni duello dura circa 15 secondi: una partita dura da 1,5 a 2,5 minuti.
+- **Cose cambiate rispetto all'idea iniziale** (per renderlo più divertente):
+  - **4 secondi per scommettere** invece di 3: servono per leggere i nomi e scegliere. Si può cambiare idea fino allo scadere e sulla TV si vede chi punta su chi (sfottò garantiti).
+  - **Tre duelli diversi** con lo stesso comando (fermare il cursore): niente da imparare di nuovo, ma non è sempre uguale.
+  - Nel **Braccio di Ferro** e nella **Legna** il tifo non rallenta il cursore (lì un cursore lento farebbe solo perdere tempo): allarga il verde e rende i colpi più forti.
+  - **Quota alta**: chi punta sul gladiatore meno scelto rischia di più (ha anche meno tifo dalla sua), quindi se vince prende +3.
+  - **Numero di duelli variabile** (circa 8): con 8 fissi, in 3, 5 o 6 giocatori qualcuno avrebbe combattuto più degli altri.
+  - **Il tifo pesa, ma non decide da solo**: in una prova bot contro bot (stessa bravura) chi ha più tifo vince 6 volte su 10, fino a 3 su 4 in 3 giocatori. Con il tifo più forte, in 3 giocatori l'unico spettatore avrebbe deciso il duello quasi sempre e il Miracolo non sarebbe mai capitato.
+  - **Pareggio**: niente punti a nessuno.
+- Se il telefono di un gladiatore si spegne, una CPU combatte al suo posto finché non rientra; chi è nel pubblico e si scollega semplicemente non punta.
+
+### 🛸 Abduction (mimetizzati nel gregge)
+
+> ⚠️ **BOT DA CREARE / CALIBRARE** — le CPU di questo gioco sono un cervello unico e semplice, fatto solo per poterlo giocare anche in pochi. **Le tre potenze (🐣 🙂 🔥) per ora giocano tutte uguali.** Da rifare con il banco di prova come negli altri giochi.
+
+- **Sulla TV** c'è un campo di notte visto dall'alto, con **40–80 mucche tutte uguali** (40 in 3 giocatori, 80 in 16). **Le mucche dei giocatori sono identiche alle altre**: stesso aspetto, stessa velocità, nessun nome. A destra c'è la classifica dei punti, sempre visibile.
+- **Il disco volante** pattuglia il campo a **zig-zag** (a righe o a colonne) o a **spirale** (verso fuori o verso dentro), ogni tanto si ferma qualche secondo a scrutare. Il cerchio verde per terra è il **raggio traente**.
+- **Sotto il raggio**: le mucche vere si immobilizzano (testa alta, occhi sgranati) e ripartono un attimo dopo che il raggio se n'è andato. Se ci sei tu e stai **fermo**, hai la stessa posa e il disco ti scambia per una mucca vera. Se ti **muovi** o **bruchi** vieni **rapito**: perdi **tutti** i punti e resti fuori 3 secondi. C'è un attimo (0,3 s) per mollare il joystick o BRUCA se il raggio ti arriva addosso.
+- **Telefono**:
+  - **📡 Radar**: per i primi 3 secondi (e durante il 3, 2, 1) mostra dove sei, con il disco. Poi si spegne: **la tua mucca te la devi ricordare** guardando la TV.
+  - **Joystick** (sinistra): ti muovi alla stessa velocità delle mucche vere, in qualsiasi direzione.
+  - **🌿 BRUCA** (destra, tieni premuto): il pulsante si riempie in 3 secondi; arrivato in fondo **+10** (e si continua, se tieni premuto). Se molli prima, niente. Mentre bruchi stai fermo.
+  - **💥 SPINGI** (destra, tocco): una testata alla mucca davanti a te (dove guardi, poco più di una mucca di distanza) che la sposta di una casella. Ricarica 4 s. Sulla TV non si vede chi ha dato la testata, solo la mucca che scivola. Se davanti non c'è nessuno non succede niente (e non parte la ricarica).
+- **Spinte**:
+  - Una mucca spinta **sotto il raggio** (o che è già sotto e viene spostata) si muove, quindi il disco la prende. Se è un giocatore perde tutti i punti e **chi l'ha spinto ne ruba metà**. Se è una mucca vera il disco se la porta via e basta.
+  - Una testata **fuori dal raggio** interrompe la brucata di chi la riceve (0 punti, deve ripremere BRUCA).
+  - Chi viene rapito vede sul telefono chi l'ha spinto; chi spinge un giocatore lo scopre subito (+ i punti rubati), chi spinge una mucca vera lo sa dal messaggio "era una mucca vera".
+- **Rientro**: dopo 3 secondi il disco ti rimette giù di nascosto, **al posto di una mucca vera lontana dal raggio** (sulla TV non si vede nulla). Il radar si riaccende per 3 secondi. Così, rapimento dopo rapimento, il gregge si assottiglia e nascondersi diventa più difficile.
+- **Ultimi 15 secondi**: il disco si arrabbia (luci rosse) e va più veloce (+35%), ma **ogni brucata vale +20**.
+- **Fine** (60 secondi, round secco): la TV mostra chi era chi (anello colorato, faccia e nome sopra le mucche dei giocatori). Vince chi ha più punti.
+
+  | Azione | Punti |
+  |---|---|
+  | brucata completa (3 s) | +10 (+20 negli ultimi 15 s) |
+  | brucata interrotta o mollata | 0 |
+  | rapito dal disco | perdi tutti i punti |
+  | spingere nel raggio un giocatore | +metà dei punti che perde |
+
+  | Giocatori | Mucche vere | Dischi | Raggio |
+  |---|---|---|---|
+  | 3–6 | 40–49 | 1 | normale |
+  | 7–9 | 52–58 | 1 | più grande |
+  | 10–16 | 62–80 | 2 | normale |
+
+- **Cose cambiate rispetto all'idea iniziale** (per renderlo più divertente):
+  - **Le mucche vere sotto il raggio si immobilizzano**: altrimenti chi sta fermo non si potrebbe confondere con loro (anche le mucche vere camminano e brucano). E il disco prende qualsiasi mucca che si muove sotto il raggio, anche quelle vere spinte da qualcuno: una regola sola, uguale per tutti.
+  - **Chi spinge un giocatore nel raggio gli ruba metà dei punti**: senza premio spingere serviva solo a far perdere gli altri; così è un vero colpo bastardo, e chi ruba diventa a sua volta il bersaglio.
+  - **La testata interrompe anche le brucate** (fuori dal raggio): si può dare fastidio anche quando il disco è lontano.
+  - **0,3 secondi di tolleranza** sotto il raggio: senza, bastava un dito che scivola sul joystick per perdere tutto.
+  - **Radar anche durante il 3, 2, 1**: 3 secondi per trovare la propria mucca tra 40 erano pochissimi.
+  - **Rientro al posto di una mucca vera** (invisibile sulla TV): se il disco ti rimettesse giù davanti a tutti, saprebbero subito chi sei.
+  - **Ultimi 15 secondi più veloci ma a +20**: un finale in cui rischiare (push-your-luck) conviene davvero.
+  - **Classifica sempre visibile sulla TV**: il +10 che compare accanto a un nome nell'istante in cui una mucca alza la testa… tradisce chi l'ha fatto. Gli occhi attenti lo notano.
+  - **Due dischi da 10 giocatori in su**: con un disco solo in un campo così affollato si rischiava troppo poco.
+- Se il telefono di qualcuno si spegne, una CPU gioca al suo posto finché non rientra.
+
 ## Cose da sapere
 
 - Se un telefono si spegne o perde la connessione, basta riaprire la pagina: si rientra al proprio posto con la propria schermata.
@@ -270,7 +407,8 @@ Nella lobby c'è **🤖 Aggiungi bot**: utile se siete in pochi o per provare il
 
 4. Aggiungi l'id in `ELENCO` dentro `public/games/index.js`.
 5. Le CPU: dentro `bot(id, dt)` usa `const cpu = ctx.cpu(id)` (vedi `public/games/cpu.js`): `cpu.livello`, `cpu.per(facile, normale, difficile)`, `cpu.reazione()` (tempi di reazione umani), `cpu.errore(sigma)`, `cpu.tratti` (carattere), `cpu.mem` (memoria del bot). Le regole da rispettare e gli obiettivi di bilanciamento sono in `test/bench/SPECIFICA.md`.
-6. `npm test` fa giocare automaticamente ogni minigioco a 3, 8 e 16 bot (di tutte e tre le potenze) e controlla che finisca con una classifica valida. Il test vuole che una partita stia sotto i 5 minuti simulati; un gioco più lungo (come Trova l'Intruso, con 3 round) lo dichiara con `durataMax: secondi` nel suo `host.js`.
+6. `npm test` fa giocare automaticamente ogni minigioco a 3, 8 e 16 bot (di tutte e tre le potenze) e controlla che finisca con una classifica valida.
+ Il test vuole che una partita stia sotto i 5 minuti simulati; un gioco più lungo (come Trova l'Intruso, con 3 round) lo dichiara con `durataMax: secondi` nel suo `host.js`.
 7. Giochi a ruoli (come Il Polpo): aggiungi a `host.js` `ruoli(giocatori, { punti, storico, escludi })`, che restituisce `{ id: 'nomeRuolo' }`, e `infoRuoli: { nomeRuolo: { emoji, nome, titolo, regole, speciale, badge } }` (`badge`: un'emoji sul gettone della scheda iniziale anche per i ruoli normali, per esempio la squadra nel Circo). La scheda iniziale mostra il ruolo speciale e il pulsante "Cambia", ogni telefono legge le regole del suo ruolo e il gioco trova i ruoli in `ctx.ruoli`. `punti` è la classifica del torneo (o `null`), `storico` quante volte ognuno ha avuto un ruolo speciale nella serata.
 
 ### Test
@@ -278,6 +416,9 @@ Nella lobby c'è **🤖 Aggiungi bot**: utile se siete in pochi o per provare il
 `npm test` esegue:
 - le regole (punti, pari merito, cerchio perfetto, taglio a metà, colori, numero unico, percorsi, ruoli e punti del Polpo, fondale sempre attraversabile, bombe/vite/gesti/timer di Detonazione, binari di Mani Incrociate);
 - le regole del Circo dei Disperati (`test/circo.test.mjs`): danni, squadre e ruoli da 3 a 16 giocatori, sfide dal seme, Caos, punti, e dei "robot" che giocano ogni ruolo sul telefono simulato (chi gioca perfetto non sbaglia mai, chi sta fermo sbaglia sempre);
+- le regole dell'Uomo Nero (`test/uomonero.test.mjs`): batterie/Echi/tempo/vite per numero di giocatori, labirinto tutto raggiungibile e uguale dallo stesso seme, movimento nei corridoi, luce che non passa i muri, durata della Morsa, ruoli e punti;
+- le regole di Fight Club (`test/fightclub.test.mjs`): numero di duelli e calendario (tutti combattono lo stesso numero di volte, coppie varie), cursore e zone, punti (Miracolo, quota alta, pareggio);
+- le regole di Abduction (`test/abduction.test.mjs`): mucche e dischi per numero di giocatori, giro del disco sempre nel campo, brucata (3 s = +10, mollata = 0, +20 alla fine), raggio (fermo = salvo, muoversi o brucare = rapito, tolleranza), spinte (nel raggio con furto di metà dei punti, fuori dal raggio interrompe la brucata, mucca vera rapita), rientro al posto di una mucca vera con il radar, mucche vere mai rapite da sole, fine a 60 s;
 - le regole di Trova l'Intruso (`test/intruso.test.mjs`): passanti solo a 8 direzioni e mai fermi più di 3 s, pugni (giocatore, passante, a vuoto, a chi si guarda), monete, acqua alta, curiosi, punti e bonus, fine round, round successivi, e che la TV non dica mai chi è un giocatore;
 - una partita simulata di ogni minigioco con bot;
 - una simulazione di rete con il server vero, uno schermo e 16 telefoni finti (ingresso, riconnessione, festa piena);
